@@ -167,7 +167,6 @@ h2 {
         overflow:hidden;
         display:block;
         background:rgba(255, 255, 255, 0.849);
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba;
         text-align: left;
         height:100vh;
         padding:10vh 2rem;
@@ -203,22 +202,21 @@ h2 {
     
     #checkbox ~ .menu{
         transition: all .5s;
-        transform: translateX(6000px);
+        transform: translateX(0px);
         position: absolute;
+        width:0;
         top:0;
         right:0;
-        width: 100%;
         opacity: 0;
     }
 
     #checkbox:checked ~ .menu{
         opacity: 1;
         transform: translateX(0px);
+        width: 100%;
+
     }
 
-    #checkbox:checked + ul{
-        display:block;
-    }
 
     #checkbox:checked + label .burger {
        background:transparent;
