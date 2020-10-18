@@ -9,6 +9,10 @@
     color:#323A45;
 }
 
+body {
+    overflow-x:hidden;
+    box-sizing: border-box;
+}
 
 /* header */
 
@@ -16,7 +20,6 @@ nav {
     display:flex;
     justify-content: space-between;
     padding:2vh 0 8vh;
-    /* background: rgb(192, 210, 216); */
     margin:0 7%;
 }
 
@@ -27,13 +30,15 @@ nav a:hover {
 .logo {
     text-transform: uppercase;
     font-weight: 700;
-    /* display:flex; */
 }
 
-body {
-    /* position:relative; */
-    overflow-x:hidden;
-    box-sizing: border-box;
+ul {
+    display:flex;
+    justify-content: flex-end;
+}
+
+li {
+    padding-left:3rem;
 }
 
 .burger{
@@ -66,18 +71,7 @@ input {
     display:none;
 }
 
-ul {
-    display:flex;
-    justify-content: flex-end;
-    /* width:90%; */
-}
-
-li {
-    padding-left:3rem;
-}
-
 /* Hauptteil - Grid  */
-
 
 main {
     display:grid;
@@ -108,7 +102,6 @@ img:hover{
 
 
 .big-picture {
-    /* background: pink; */
     grid-column-start: 1;
     grid-column-end: 4;
 }
@@ -136,7 +129,6 @@ h2 {
 
 .italic {
     font-style: italic;
-
 }
 
 .footer span {
@@ -147,7 +139,6 @@ h2 {
     color:#848484;
     margin:0 7%;
     font-size: 1.1rem;
- 
 }
 
 .copyright span {
@@ -159,9 +150,7 @@ h2 {
 
 /* mediaqueries */
 
-
 @media only screen and (max-width: 1024px) {
-
 
     ul {
         overflow:hidden;
