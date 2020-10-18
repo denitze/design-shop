@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+
+* {
+    text-decoration: none;
+    list-style: none;
+    margin:0;
+    font-family: 'Karla', sans-serif;
+    color:#323A45;
+}
+
+
+/* header */
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    padding:2vh 0 8vh;
+    /* background: rgb(192, 210, 216); */
+    margin:0 7%;
+}
+
+nav a:hover {
+    color:#848484;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    /* display:flex; */
+}
+
+body {
+    /* position:relative; */
+    overflow-x:hidden;
+    box-sizing: border-box;
+}
+
+.burger{
+z-index:3;
+position:relative;
+display:none;
+}
+
+.burger, .burger::before, .burger::after {
+    content:"";
+    width:30px;
+    height:4px;
+    background:#323A45;     
+}
+
+.burger::before, .burger::after {
+    position:absolute;
+    transition: all .2s;   
+}
+
+.burger::before {
+    top:-.5rem;
+}
+
+.burger::after {
+    top:.5rem;
+}
+
+input {
+    display:none;
+}
+
+ul {
+    display:flex;
+    justify-content: flex-end;
+    /* width:90%; */
+}
+
+li {
+    padding-left:3rem;
+}
+
+/* Hauptteil - Grid  */
+
+
+main {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1.5rem;
+    justify-content: center;
+    margin:0 7%;
+}
+
+figcaption {
+    display:flex;
+    justify-content: space-between;
+}
+
+img {
+    width:100%;
+}
+
+img:hover{
+        filter: grayscale(60%);
+        opacity: 0.5;
+        transition:.5s ;
+  }
+
+.brand {
+    color: #848484;
+}
+
+
+.big-picture {
+    /* background: pink; */
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* footer  */
+
+.footer {
+    display:grid;
+    grid-template-columns: 2.4fr 1fr 1.5fr 2fr;
+    margin:9vh 7%;
+    gap: 1rem;
+}
+
+.footer div {
+    display:flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom:2vh;
+}
+
+.italic {
+    font-style: italic;
+
+}
+
+.footer span {
+    font-weight: bold;
+}
+
+.copyright p{
+    color:#848484;
+    margin:0 7%;
+    font-size: 1.1rem;
+ 
+}
+
+.copyright span {
+    color:#848484;
+    font-size: 1.2rem;
+    padding:0 1rem;
+}
+
+
+/* mediaqueries */
+
+
+@media only screen and (max-width: 1024px) {
+
+
+    ul {
+        overflow:hidden;
+        display:block;
+        background:rgba(255, 255, 255, 0.849);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba;
+        text-align: left;
+        height:100vh;
+        padding:10vh 2rem;
+        z-index: 1;
+        font-size: 1.5rem;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+
+    li {
+        padding:.5vh;
+        margin-bottom:1rem;
+
+    }
+
+    li a {
+        color:#848484;
+    }
+
+    #checkbox {
+        display:none;
+        position:absolute;
+        z-index: 2;
+        height:3rem;
+        width:3rem;
+        top:.5rem;
+        right:3.9rem;
+        
+    }
+
+    /* Toggle Menu visibility */
+    
+    #checkbox ~ .menu{
+        transition: all .5s;
+        transform: translateX(6000px);
+        position: absolute;
+        top:0;
+        right:0;
+        width: 100%;
+        opacity: 0;
+    }
+
+    #checkbox:checked ~ .menu{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    #checkbox:checked + ul{
+        display:block;
+    }
+
+    #checkbox:checked + label .burger {
+       background:transparent;
+    }
+    #checkbox:checked + label .burger::before {
+        transform:rotate(135deg);
+        top:0;
+        background:#848484;
+    }
+    #checkbox:checked + label .burger::after {
+        transform:rotate(-135deg);
+        top:0;
+        background:#848484;
+    }
+    
+    .burger{
+        display:inline-block;
+        }
+}
+
+@media only screen and (max-width: 580px) {
+    main {
+        grid-template-columns: 1fr; 
+    }
+
+    ul {
+        font-size: 1.4rem;
+
+        
+    }
+
+    .big-picture {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+    .footer div {
+        margin-bottom:3vh;
+    }
+}
+
