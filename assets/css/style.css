@@ -166,9 +166,6 @@ h2 {
         align-items: center;
     }
 
-  
-
-
     li {
         padding:.5vh;
         margin-bottom:1rem;
@@ -189,8 +186,7 @@ h2 {
         height:3rem;
         width:3rem;
         top:.5rem;
-        right:3.9rem;
-        
+        right:3.9rem;  
     }
 
     /* Toggle Menu visibility */
@@ -209,7 +205,6 @@ h2 {
         opacity: 1;
         transform: translateX(0px);
         width: 100%;
-
     }
 
 
