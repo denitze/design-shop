@@ -169,11 +169,14 @@ h2 {
     li {
         padding:.5vh;
         margin-bottom:1rem;
-
     }
 
     li a {
         color:#848484;
+    }
+
+    li a:hover {
+        color:#323A45;
     }
 
     #checkbox {
@@ -232,9 +235,7 @@ h2 {
     }
 
     ul {
-        font-size: 1.4rem;
-
-        
+        font-size: 1.4rem;    
     }
 
     .big-picture {
