@@ -247,5 +247,8 @@ h2 {
     .footer div {
         margin-bottom:3vh;
     }
+    .copyright p{
+        font-size: .9rem;
+    }
 }
 
